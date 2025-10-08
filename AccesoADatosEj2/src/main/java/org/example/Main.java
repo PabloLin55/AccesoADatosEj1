@@ -155,6 +155,11 @@ public class Main {
                         if (aficionesLista.contains("")) {
                             throw new EntradaFormatoIncorrecto();
                         }
+                        for (int i = 0; i < aficionesLista.size(); i++) {
+                            if (aficionesLista.get(i).contains(",")) {
+                                throw new EntradaFormatoIncorrecto();
+                            }
+                        }
                         //Ordeno alfabéticamente la lista de aficiones y las meto en el StringBuilder de usuarioCompleto.
                         aficionesLista.sort(String::compareTo);
                         for (int i = 0; i < aficionesLista.size(); i++) {
